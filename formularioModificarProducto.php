@@ -18,13 +18,12 @@
     
 <h1>Modificar producto</h1>
 
-<form action="modificarProdcuto.php" method="post">
+<form action="modificarProducto.php" method="post">
         ID: <input type="text" name="id" value="<?= $resultado['id'] ?>" readonly> <br />
         Nombre: <input type="text" name="nombre" value="<?= $resultado['nombre'] ?>" > <br />
-        Apellido: <input type="text" name="apellido" value="<?= $resultado['apellido'] ?>" > <br />
-        Telefono: <input type="number" name="telefono" value="<?= $resultado['telefono'] ?>" > <br />
-        Email: <input type="email" name="email" value="<?= $resultado['email'] ?>" > <br />
-
+        Descripcion: <input type="text" name="descripcion" value="<?= $resultado['descripcion'] ?>" > <br />
+        Stock: <input type="number" name="stock" value="<?= $resultado['stock'] ?>" > <br />
+       
         <input type="submit" value="Enviar">
     </form>
 </body>

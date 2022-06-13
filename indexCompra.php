@@ -27,8 +27,8 @@ $resultado = $conexion -> query($sql);
         <b>Stock:</b> <?=$fila['stock']?> 
         
         
-        <a href="eliminarProducto.php?id=<?=$fila['id']?>">Eliminar</a>
-        <a href="formularioModificarProducto.php?id=<?=$fila['id']?>">Modificar</a>
+        <a href="eliminarCompra.php?id=<?=$fila['id']?>">Eliminar</a>
+        <a href="formularioModificarCompra.php?id=<?=$fila['id']?>">Modificar</a>
 
         <br />
 
@@ -36,25 +36,20 @@ $resultado = $conexion -> query($sql);
 
     
     <br /> <br />
-    <form action="insertarProducto.php" method="post">
-        ID: <input type="text" name="id" > <br />
-        Nombre: <input type="text" name="nombre" > <br />
-      	Descrpcion: <input type="text" name="descripcion" > <br />
-        Stock:<input type="number" name="stock" > <br />
-         <input type="submit" value="Enviar">
+    <form action="insertarCompra.php" method="post">
+        ID Persona: <input type="text" name="id" > <br />
+        ID producto: <input type="text" name="nombre" > <br />
+      	Fecha: <input type="text" name="descripcion" > <br />
+       <input type="submit" value="Enviar">
     </form>
     <br /> <br />    <br /> <br />
 <form action="index.php">
     <input type="submit" value="Personas" />
 </form>
-</form>
-<form action="indexcompras.php">
-    <input type="submit" value="Comprar" />
-</form>
 
     <?php if(isset($_GET['exito']) && $_GET['exito'] === "true" ) :?>
-        <div style="color: green;">Se ingreso el producto correctamente</div>
-       <br/> <a href><img src="https://meme.museum/_thumbs/9ed0ec64abcfada0214d975dc748b176/thumb.jpg"></a>
+        <div style="color: green;">Se realizo la compra exitosamente</div>
+    
 
     <?php endif;?>
     <?php if(isset($_GET['exito']) && $_GET['exito'] === "false" ) :?>
@@ -63,23 +58,21 @@ $resultado = $conexion -> query($sql);
     <?php endif;?>
 
     <?php if(isset($_GET['eliminado']) && $_GET['eliminado'] === "true" ) :?>
-        <div style="color: green;">Se eliminó el producto correctamente 
-       <br/> <a href><img src="https://meme.museum/_thumbs/9ed0ec64abcfada0214d975dc748b176/thumb.jpg"></a>
+        <div style="color: green;">Se elimino la compra correctamente
         </div>
     <?php endif;?>
 
     <?php if(isset($_GET['eliminado']) && $_GET['eliminado'] === "false" ) :?>
-        <div style="color: red;">Hubo un error al eliminar</div>
+        <div style="color: red;">Hubo un error al eliminar la compra </div>
 
     <?php endif;?>
 
     <?php if(isset($_GET['modificado']) && $_GET['modificado'] === "true" ) :?>
-        <div style="color: green;">Se modificaron los datos correctamente</div>
-        <br/><a href><img src="https://meme.museum/_thumbs/9ed0ec64abcfada0214d975dc748b176/thumb.jpg"></a>
-    <?php endif;?>
+        <div style="color: green;">Se modificaron los datos correctamente :D</div>
+        <?php endif;?>
 
     <?php if(isset($_GET['modificado']) && $_GET['modificado'] === "false" ) :?>
-        <div style="color: red;">Hubo un error al modificar al usuario</div>
+        <div style="color: red;">Hubo un error al modificar la compra</div>
     <?php endif;?>
 </body>
 </html>

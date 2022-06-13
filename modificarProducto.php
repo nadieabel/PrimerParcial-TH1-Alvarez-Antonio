@@ -14,10 +14,10 @@
     $conexion = new mysqli("127.0.0.1","root","","parcial");
 
     $sql = "UPDATE producto SET 
-        nombre = '$nombre',
-        descripcion = '$descripcion',
-        stock = $stock,
-        WHERE id = $id";
+      nombre='$nombre',
+      descripcion='$descripcion',
+      stock=$stock
+      WHERE id=$id";
 
     if($conexion -> query($sql) === TRUE )
         header("Location: indexproducto.php?modificado=true");
