@@ -48,7 +48,7 @@ $resultado = $conexion -> query($sql);
     <input type="submit" value="Personas" />
 </form>
 </form>
-<form action="indexcompras.php">
+<form action="indexcompra.php">
     <input type="submit" value="Comprar" />
 </form>
 

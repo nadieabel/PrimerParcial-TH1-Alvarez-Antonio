@@ -1,0 +1,3 @@
+no entendi la parte de compras
+y los archivos me funcionaban si era archivo.php y no /archivo.php
+tambien no tenia contraseña para la bdd

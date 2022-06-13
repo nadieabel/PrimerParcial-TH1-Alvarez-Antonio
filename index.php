@@ -50,7 +50,7 @@ $resultado = $conexion -> query($sql);
     <form action="indexproducto.php">
     <input type="submit" value="Productos" />
 </form>
-<form action="indexcompras.php">
+<form action="indexCompra.php">
     <input type="submit" value="Comprar" />
 </form>
 
